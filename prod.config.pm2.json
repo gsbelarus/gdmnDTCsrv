@@ -1,0 +1,14 @@
+{
+  "name": "gdmnDCTsvr",
+  "script": "./dist/server.js",
+  "node_args": [],
+  "log_date_format": "DD-MM-YYYY HH:mm:ss Z",
+  "min_uptime": "60s",
+  "max_restarts": 5,
+  "max_memory_restart": "1G",
+  "exec_interpreter": "node",
+  "autorestart": true,
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

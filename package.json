@@ -1,0 +1,53 @@
+{
+  "name": "gdmnDCTsvr",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "devServer": "babel-node ./src/server.js",
+    "prodServer": "yarn run build&&set NODE_ENV=production&&node ./dist/server.js",
+    "build": "babel ./src -d ./dist",
+    "start": "yarn run prodServer",
+    "startPM2Server": "pm2 start prod.config.pm2.json",
+    "stopPM2Server": "pm2 delete prod.config.pm2.json",
+    "monitorPM2": "pm2 monit",
+    "updatePM2": "pm2 update"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "config": "^1.26.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "node-firebird": "^0.8.4",
+    "path": "^0.12.7",
+    "pm2": "^2.7.1",
+    "promise-queue": "^2.2.3",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-es2015-destructuring",
+      "transform-es2015-modules-commonjs",
+      [
+        "babel-plugin-transform-builtin-extend",
+        {
+          "globals": [
+            "Error",
+            "Array"
+          ]
+        }
+      ]
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+doctype html
+html
+    head
+        title='GDMN_TA'
+    body
+        h1=statusMessage
+        h2=status
+        if (error)
+            h3 #{error.code + ' ' + error.message}
+        if (error)
+            pre #{error.stack}

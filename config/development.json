@@ -1,0 +1,20 @@
+{
+  "server": {
+    "http": {
+      "enabled": true,
+      "host": "192.168.0.62"
+    },
+    "https": {
+      "enabled": false,
+      "host": "192.168.0.62"
+    }
+  },
+  "db": {
+    "host": "brutto",
+    "port": 3053,
+    "path": "k:\\Bases\\BMKK\\GDBASE_2017_08_24.FDB"
+  }
+}
+//"path": "g:\\Web\\gdmnTASrv\\GDBASE_2016_10_31.FDB"
+//"path": "k:\\Bases\\Broiler\\GDBASE_2016_10_31.FDB"
+//"path": "k:\\Bases\\mogilevMK\\GDBASE_BUH_2016_12_01.FDB"

@@ -1,0 +1,27 @@
+{
+  "server": {
+    "http": {
+      "enabled": true,
+      "host": "localhost",
+      "port": 3001
+    },
+    "https": {
+      "enabled": false,
+      "host": "localhost",
+      "port": 3002,
+      "keyPath": "./default_key.key",
+      "certPath": "./default_cert.cert"
+    },
+    "publicDir": "./public"
+  },
+  "db": {
+    "user": "SYSDBA",
+    "password": "masterkey",
+    "host": "localhost",
+    "port": 3050,
+    "path": "./DEFAULT.FDB"
+  },
+  "auth": {
+    "jwtSecret": "DefaultJWTSecret"
+  }
+}
